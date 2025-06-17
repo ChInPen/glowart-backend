@@ -59,7 +59,7 @@ router.get("/Exhibitionfalse", async (req, res) => {
         console.warn("類別篩選是空的，跳過 API 呼叫")
       } else {
         const response = await axios.get(
-          `http://localhost:8000/api/Exhibition/categoryFilter`,
+          `https://glowart-backend.onrender.com/api/Exhibition/categoryFilter`,
           {
             params: {
               categories: categoryParams,

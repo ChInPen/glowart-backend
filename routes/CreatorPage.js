@@ -17,7 +17,7 @@ function authenticateToken(req, res, next) {
   }
 }
 
-// 投稿藝廊（內頁） http://localhost:8000/creator/:id
+// 投稿藝廊（內頁） https://glowart-backend.onrender.com/creator/:id
 router.get('/creator/:id', async function (req, res) {
     const { id } = req.params;
     try {
@@ -166,7 +166,7 @@ router.get('/creator/:id/collect-status', authenticateToken, async (req, res) =>
 });
 
 
-// 展覽-推薦展覽 http://localhost:8000/exhibition/:id/recommended
+// 展覽-推薦展覽 https://glowart-backend.onrender.com/exhibition/:id/recommended
 async function findRecommendedExhibitions(exhibitionId, isSubmission) {
     try {
         // 查找當前展覽的類別

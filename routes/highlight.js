@@ -2,7 +2,7 @@ let express = require("express") //抓取express
 let pool = require("../db") //抓取db檔案的pool變數
 let router = express()  //建立router路由
 
-// 演藝快訊(內頁) http://localhost:8000/news/highlight/1
+// 演藝快訊(內頁) https://glowart-backend.onrender.com/news/highlight/1
 router.get('/news/highlight/:id', async function (req, res) {
     const { id } = req.params; // 取得 URL 中的 id
     try {
@@ -20,7 +20,7 @@ router.get('/news/highlight/:id', async function (req, res) {
     }
 })
 
-// 演藝快訊-延伸閱讀 http://localhost:8000/newspage
+// 演藝快訊-延伸閱讀 https://glowart-backend.onrender.com/newspage
 router.get('/newspage', async function (req, res) {
     try {
         let artNewsMore = await pool.query(
