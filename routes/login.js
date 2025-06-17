@@ -53,8 +53,8 @@ router.post('/login', async (req, res) => {
 
   res.cookie('token', token, {
     httpOnly: true,
-    secure: false,
-    sameSite: 'lax',
+    secure: true,
+    sameSite: 'None',
     maxAge: 1000 * 60 * 60 * 24 * 365 * 100
   });
   res.json({ message: "登入成功", token });
