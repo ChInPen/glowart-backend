@@ -5,11 +5,11 @@ require('dotenv').config(); //可以使用.env檔案
 const app = express()
 app.listen(8000, function () {
   console.log("伺服器 啟動!");
-})
+}) 
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-  origin: ['https://glowart-frontend.onrender.com'],
+  origin: ['https://glowart.onrender.com'],
   credentials: true
 }))
 const login = require("./routes/login.js")
